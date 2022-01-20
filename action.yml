@@ -35,8 +35,7 @@ runs:
       shell: bash
       run: echo "::set-output name=run_result::$(cat run_result 2>/dev/null || echo 'default')"
       
-      
-     - name: Record result
+    - name: Record result
       if: ${{ inputs.action == 'record_result' }}
       shell: bash
       run: echo 'success' > run_result
