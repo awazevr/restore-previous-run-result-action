@@ -5,6 +5,7 @@ runs:
   using: "composite"
   steps:
     - id: timestamp
+      shell: bash
       run: echo "::set-output name=timestamp::$(timestamp +%s)"
     - name: Restore the previous run result
       uses: actions/cache@v2
@@ -15,4 +16,5 @@ runs:
         restore-keys: |
           ${{ github.run_id }}-${{ github.job }}-
     - id: run_result
+      shell: bash
       run: cat run_result 2>/dev/null || echo 'default'
