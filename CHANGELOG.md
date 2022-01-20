@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/awazevr/restore-previous-run-result-action/compare/v1.0.6...v1.0.7) (2022-01-20)
+
+
+### Bug Fixes
+
+* Fix syntax error ([4aa1527](https://github.com/awazevr/restore-previous-run-result-action/commit/4aa152761504788dd5b631b860bd46434782cc6e))
+
 ## [1.0.6](https://github.com/awazevr/restore-previous-run-result-action/compare/v1.0.5...v1.0.6) (2022-01-20)
 
 
