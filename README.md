@@ -21,14 +21,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Restore previous run result
-        id: run_result
-        uses: awazevr/restore-previous-run-result-action@v1.0.1
+        id: run-result
+        uses: awazevr/restore-previous-run-result-action@v1.0.8
+        with:
+          action: 'restore_result'
 
       - name: Your usual CI action
-        if: steps.run_result.outputs.run_result != 'success'
+        if: steps.run-result.outputs.run-result != 'success'
         runs: echo 'some ci action'
 
-      - run: echo "::set-output name=run_result::success" > run_result
+      - name: Record job result
+        uses: awazevr/restore-previous-run-result-action@v1.0.8
+        with:
+          action: 'record_result'
 
 ```
 
