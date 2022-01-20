@@ -3,7 +3,7 @@ description: "Restore the previous run result for a particular job"
 
 inputs:
   action:
-    description: 'The action to perform (`restore_result` - get the previous result, `record_result` - record the result)
+    description: 'The action to perform (`restore_result` - get the previous result, `record_result` - record the result)'
     required: true
 
 outputs:
