@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/awazevr/restore-previous-run-result-action/compare/v1.0.1...v1.0.2) (2022-01-20)
+
+
+### Bug Fixes
+
+* Update timestamp ([1e08d22](https://github.com/awazevr/restore-previous-run-result-action/commit/1e08d224e3898bce8a43bba2e0395e1861b4238f))
+
 ## [1.0.1](https://github.com/awazevr/restore-previous-run-result-action/compare/v1.0.0...v1.0.1) (2022-01-20)
 
 
