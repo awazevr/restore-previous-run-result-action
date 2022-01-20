@@ -17,6 +17,5 @@ runs:
         restore-keys: |
           ${{ github.run_id }}-${{ github.job }}-
     - name: Get the previous run result
-      id: run_result
       shell: bash
-      run: cat run_result 2>/dev/null || echo 'default'
+      run: echo "::set-output name=run_result::$(cat run_result 2>/dev/null || echo 'default')"
