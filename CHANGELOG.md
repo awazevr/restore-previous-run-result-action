@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/awazevr/restore-previous-run-result-action/compare/v1.0.4...v1.0.5) (2022-01-20)
+
+
+### Bug Fixes
+
+* Add output to action ([676bebf](https://github.com/awazevr/restore-previous-run-result-action/commit/676bebf011f7dfc5e9aac05cbb1f59b9d1d683af))
+
 ## [1.0.4](https://github.com/awazevr/restore-previous-run-result-action/compare/v1.0.3...v1.0.4) (2022-01-20)
 
 
