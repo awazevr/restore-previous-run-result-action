@@ -1,0 +1,18 @@
+name: "Restore previous run result"
+description: "Restore the previous run result for a particular job"
+
+runs:
+  using: "composite"
+  steps:
+    - id: timestamp
+      run: echo "::set-output name=timestamp::$(timestamp +%s)"
+    - name: Restore the previous run result
+      uses: actions/cache@v2
+      with:
+        path: |
+          run_result
+        key: ${{ github.run_id }}-${{ github.job }}-${{ steps.timestamp.outputs.timestamp }}
+        restore-keys: |
+          ${{ github.run_id }}-${{ github.job }}-
+    - id: run_result
+      run: cat run_result 2>/dev/null || echo 'default'
