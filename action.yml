@@ -6,7 +6,7 @@ runs:
   steps:
     - id: timestamp
       shell: bash
-      run: echo "::set-output name=timestamp::$(timestamp +'%Y-%m-%dT%H:%M:%S')"
+      run: echo "::set-output name=timestamp::$(date +'%Y-%m-%dT%H:%M:%S')"
 
     - name: Restore the previous run result
       uses: actions/cache@v2
