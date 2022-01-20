@@ -1,6 +1,11 @@
 name: "Restore previous run result"
 description: "Restore the previous run result for a particular job"
 
+outputs:
+  run-result:
+    description: "Previous run result"
+    value: ${{ steps.run_result.outputs.run_result }}
+
 runs:
   using: "composite"
   steps:
@@ -17,5 +22,6 @@ runs:
         restore-keys: |
           ${{ github.run_id }}-${{ github.job }}-
     - name: Get the previous run result
+      id: run_result
       shell: bash
       run: echo "::set-output name=run_result::$(cat run_result 2>/dev/null || echo 'default')"
